@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.xugang.meituan.SearchActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <LinearLayout
+            android:id="@+id/llBack"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:background="@mipmap/food_ic_actionbar_back" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin_10"
+            android:layout_weight="1"
+            android:background="@drawable/search_gray_bck"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="@dimen/margin_8"
+                android:background="@mipmap/ic_global_search_results_title" />
+
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/search_gray_bck"
+                android:hint="搜索商家、品类或商圈"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvX"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@mipmap/x"
+                android:paddingRight="@dimen/margin_10" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvSearch"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="搜索"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#E2E7E6"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_12"
+            android:text="热门搜索" />
+
+        <GridView
+            android:id="@+id/gvHotSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E2E7E6"
+            android:horizontalSpacing="1dp"
+            android:numColumns="3"
+            android:verticalSpacing="1dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#E2E7E6"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_12"
+            android:text="搜索历史" />
+
+        <ListView
+            android:id="@+id/lvHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvSearchResult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

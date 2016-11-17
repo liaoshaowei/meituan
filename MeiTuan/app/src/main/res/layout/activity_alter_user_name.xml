@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFF1EE"
+    android:orientation="vertical"
+    tools:context="com.xugang.meituan.setings.AlterUserNameActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvBack"
+            android:layout_width="@dimen/huoguo_text_size"
+            android:layout_height="@dimen/huoguo_text_size"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:background="@mipmap/food_ic_actionbar_back"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:text="修改用户名" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingTop="@dimen/margin_10"
+        android:text="用户名:" />
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:layout_marginRight="@dimen/margin_15" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_15"
+        android:text="@string/usernamehint"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/btnAlter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_title"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:background="@drawable/btn_login_selector"
+        android:gravity="center"
+        android:text="确定修改"
+        android:textColor="@color/base_color_text_white"
+        android:textSize="@dimen/text_size_large" />
+</LinearLayout>

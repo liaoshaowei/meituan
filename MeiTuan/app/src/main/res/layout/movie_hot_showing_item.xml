@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="7">
+
+    <LinearLayout
+        android:id="@+id/ll_cinemas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/movie_studio_tv"
+                style="@style/MovieTextSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="横店电影城（高辉店）"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/movie_distance_tv"
+                style="@style/MovieSmallText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:text="1.0km" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/movie_item_tv_i"
+                style="@style/MovieItemTextI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥9.9" />
+
+            <TextView
+                android:id="@+id/movie_item_tv_ii"
+                style="@style/MovieItemTextII"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/movie_item_tv_i"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="3dp"
+                android:layout_toRightOf="@id/movie_item_tv_i"
+                android:text="起" />
+
+            <TextView
+                android:id="@+id/movie_item_tv_iii"
+                style="@style/MovieItemTextIII"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/movie_item_tv_ii"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="3dp"
+                android:layout_toRightOf="@id/movie_item_tv_ii"
+                android:background="@drawable/movie_list_small_tv_shape"
+                android:padding="1dp"
+                android:text="座" />
+
+            <TextView
+                style="@style/MovieItemTextIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/movie_item_tv_ii"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="3dp"
+                android:layout_toRightOf="@id/movie_item_tv_iii"
+                android:background="@drawable/movie_list_small_tv_shape_ii"
+                android:padding="1dp"
+                android:text="改签" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/movie_item_rl_hui"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp">
+
+            <ImageView
+                android:id="@+id/movie_item_iv_hui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="0.5dp"
+                android:src="@mipmap/movie_hui_icon" />
+
+            <TextView
+                android:id="@+id/movie_item_tv_hui_i"
+                style="@style/MovieItemTextIIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:layout_toRightOf="@+id/movie_item_iv_hui"
+                android:text="捉迷藏特惠" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+<corners android:topLeftRadius="0dp" android:bottomLeftRadius="0dp" android:bottomRightRadius="@dimen/movie_radius_size" android:topRightRadius="@dimen/movie_radius_size"/>
+    <solid android:color="@color/white"/>
+    <stroke android:color="@color/toobar_color" android:width="1dp"/>
+</shape>

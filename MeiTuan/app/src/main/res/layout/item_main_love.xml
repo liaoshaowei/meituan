@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3.5">
+
+            <ImageView
+                android:id="@+id/ivPicture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="6.5"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="一元夺iPhone6"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tvSpace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="500m" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:text="[天河客运站]仅售0.1元![天河客运站]仅售0.1元![天河客运站]仅售0.1元![天河客运站]仅售0.1元!"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥"
+                    android:textColor="#18CAB5"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="13.5"
+                    android:textColor="#18CAB5"
+                    android:textSize="18sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp">
+
+                    <TextView
+                        android:id="@+id/tvYouhui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/main_rectengle"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="新用户立减15元"
+                        android:textColor="#F1A343"
+                        android:textSize="9sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tvPriceII"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="门市价:￥13.5"
+                        android:textSize="9sp"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tvYiShou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已售374"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvXiaoliang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#33F1A343"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="附近销量TOP3"
+                android:textColor="#F1A343"
+                android:textSize="10sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/rlRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_tras" />
+
+        <TextView
+            android:id="@+id/tvNotLike"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/not_like"
+            android:gravity="center"
+            android:text="不喜欢"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tvClose"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:text="×"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+    </RelativeLayout>
+</RelativeLayout>
+

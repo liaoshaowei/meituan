@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.xugang.meituan.weight.PullToRefreshView
+        android:id="@+id/movie_pull_to_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.xugang.meituan.weight.MyScorllView
+            android:id="@+id/my_scorll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!--<android.support.design.widget.CoordinatorLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent">-->
+
+                    <!--<android.support.design.widget.AppBarLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content">-->
+
+                    <!--<android.support.design.widget.CollapsingToolbarLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--app:layout_scrollFlags="scroll|enterAlwaysCollapsed|exitUntilCollapsed">-->
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/rlhs"
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp">
+
+                            <android.support.v4.view.ViewPager
+                                android:id="@+id/vpMovie"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <RadioGroup
+                                android:id="@+id/rgMovieHot"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/movie_top_rb1"
+                                    android:layout_width="7dp"
+                                    android:layout_height="7dp"
+                                    android:background="@drawable/sleckt_main"
+                                    android:button="@null"
+                                    android:checked="true" />
+
+                                <RadioButton
+                                    android:id="@+id/movie_top_rb2"
+                                    android:layout_width="7dp"
+                                    android:layout_height="7dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:background="@drawable/sleckt_main"
+                                    android:button="@null" />
+
+                                <RadioButton
+                                    android:id="@+id/movie_top_rb3"
+                                    android:layout_width="7dp"
+                                    android:layout_height="7dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:background="@drawable/sleckt_main"
+                                    android:button="@null" />
+
+                                <RadioButton
+                                    android:id="@+id/movie_top_rb4"
+                                    android:layout_width="7dp"
+                                    android:layout_height="7dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:background="@drawable/sleckt_main"
+                                    android:button="@null" />
+
+                                <RadioButton
+                                    android:id="@+id/movie_top_rb5"
+                                    android:layout_width="7dp"
+                                    android:layout_height="7dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:background="@drawable/sleckt_main"
+                                    android:button="@null" />
+
+                                <RadioButton
+                                    android:id="@+id/movie_top_rb6"
+                                    android:layout_width="7dp"
+                                    android:layout_height="7dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:background="@drawable/sleckt_main"
+                                    android:button="@null" />
+                            </RadioGroup>
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp">
+
+                                <TextView
+                                    style="@style/MovieTextSize"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:gravity="center"
+                                    android:text="热映影片" />
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="5dp">
+
+                                    <TextView
+                                        android:id="@+id/movie_tv"
+                                        style="@style/MovieSmallText"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:text="查看全部" />
+
+                                    <ImageView
+                                        android:id="@+id/movieSmallIv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_toRightOf="@id/movie_tv"
+                                        android:background="@mipmap/movie_small_right" />
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/id_recyclerview_horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:scrollbars="none"></android.support.v7.widget.RecyclerView>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/gray" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:src="@mipmap/movie_ic_maoyan_news" />
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="13dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dp"
+                                android:background="@color/grayII" />
+
+                            <TextView
+                                style="@style/MovieSmallText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="今日实时票房2061.1万，点击查看" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:background="@color/grayII" />
+                    </LinearLayout>
+
+
+                    <!--</android.support.design.widget.CollapsingToolbarLayout>-->
+
+                    <LinearLayout
+                        android:id="@+id/center_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp">
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    style="@style/MovieTextSize"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="全部" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@mipmap/movie_arrow_down_tuan" />
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="0.7dp"
+                                android:layout_height="17dp"
+                                android:layout_gravity="center"
+                                android:background="@color/grayII" />
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    style="@style/MovieTextSize"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="附近" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@mipmap/movie_arrow_down_tuan" />
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="0.7dp"
+                                android:layout_height="17dp"
+                                android:layout_gravity="center"
+                                android:background="@color/grayII" />
+
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    style="@style/MovieTextSize"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="智能排序" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@mipmap/movie_arrow_down_tuan" />
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="0.7dp"
+                                android:layout_height="17dp"
+                                android:layout_gravity="center"
+                                android:background="@color/grayII" />
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    style="@style/MovieTextSize"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="筛选" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@mipmap/movie_arrow_down_tuan" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/grayII" />
+
+                    </LinearLayout>
+
+                    <!--</android.support.design.widget.AppBarLayout>-->
+
+                    <!--<android.support.v4.widget.NestedScrollView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@color/white"-->
+                    <!--app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+
+                    <ListView
+                        android:id="@+id/movie_lv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <!--</android.support.v4.widget.NestedScrollView>-->
+
+
+                    <!--</android.support.design.widget.CoordinatorLayout>-->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/top_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="39dp"
+                    android:background="@color/white">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            style="@style/MovieTextSize"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="全部" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/movie_arrow_down_tuan" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0.7dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center"
+                        android:background="@color/grayII" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            style="@style/MovieTextSize"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="附近" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/movie_arrow_down_tuan" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0.7dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center"
+                        android:background="@color/grayII" />
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            style="@style/MovieTextSize"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="智能排序" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/movie_arrow_down_tuan" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0.7dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center"
+                        android:background="@color/grayII" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            style="@style/MovieTextSize"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="筛选" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/movie_arrow_down_tuan" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </com.xugang.meituan.weight.MyScorllView>
+    </com.xugang.meituan.weight.PullToRefreshView>
+</LinearLayout>
+
+    <!--</com.xugang.meituan.weight.PullToRefreshView>-->

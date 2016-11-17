@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="toobar_color">#02BFA9</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="gray">#EBEDEA</color>
+    <color name="grayII">#ddd</color>
+    <color name="blackII">#333</color>
+    <color name="grayTheme">#d2d2d2</color>
+    <color name="mine_text_on">#2EBBA8</color>
+    <color name="mine_text_no">#767875</color>
+    <color name="rea">#f00</color>
+    <color name="red">#ed3118</color>
+
+
+    <color name="one">#FED435</color>
+    <color name="two">#F79737</color>
+    <color name="three">#FB867B</color>
+    <color name="four">#FC6FC1</color>
+    <color name="five">#A6DD6D</color>
+    <color name="six">#85D8EA</color>
+    <color name="seven">#CC9DF1</color>
+    <color name="eight">#FBB53E</color>
+    <color name="gray_tras">#554d4c4c</color>
+    <color name="green">#0f0</color>
+    <color name="yellowI">#ff9100</color>
+    <color name="gray_trasII">#994d4c4c</color>
+
+    <color name="redI">#33efb080</color>
+    <color name="redII">#9c7c63</color>
+    <color name="redIII">#e64910</color>
+    <color name="blurI">#1688d9</color>
+    <color name="blurII">#301688d9</color>
+
+    <color name="ratingbar_i">#FB9C06</color>
+
+
+    <color name="orange">#e98e10</color>
+    <color name="grayLight">#F9F9F9</color>
+    <color name="grayDeepDark">#AAAAAA</color>
+    <color name="grayDark">#E3E3E3</color>
+    <color name="grayMiddle">#eeeeee</color>
+
+
+    <color name="transparent">#00000000</color>
+
+    <color name="base_color_text_black">#3e3e39</color>
+    <color name="base_color_text_gray">#9fa0a0</color>
+    <color name="base_color_text_white">#ffffff</color>
+    <color name="color_theme">#489cfa</color>
+
+    <color name="color_emote_divder">#ffa1a1a1</color>
+    <color name="color_emote_divderII">#e7e7e7</color>
+    <color name="color_bottom_bg">#272a2e</color>
+    <color name="color_bottom_text_normal">#9da0a4</color>
+    <color name="color_bottom_text_press">#4f9ef6</color>
+    <color name="text_gray">#969696</color>
+    <color name="msg_chat_bg">#eceff4</color>
+
+    <color name="theme_bg_color">#f0f2f5</color>
+    <color name="c_f98800">#ed4e23</color>
+    <color name="base_bg">#f4f6f6</color>
+    <color name="dialog_color_title">#f82c22</color>
+    <color name="guide_color">#898989</color>
+
+    <color name="common_bg">#fcfcfc</color>
+    <color name="color_99">#999999</color>
+    <color name="color_line">#dadada</color>
+    <color name="color_chat_send_status">#818181</color>
+    <color name="color_msg_system_time_bg">#20000000</color>
+    <color name="color_1e1e1e">#1e1e1e</color>
+    <color name="color_b4">#b4b4b4</color>
+
+    <color name="toobar_attr">#1590E9</color>
+    <color name="gray_ii">#eeee</color>
+
+</resources>

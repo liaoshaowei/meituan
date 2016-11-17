@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/movie_select_rl"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <RelativeLayout
+            android:id="@+id/movie_select_lv_movietime_rl_i"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/movie_select_tv_start_tm"
+                style="@style/MovieNumSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="11:20" />
+
+            <TextView
+                android:id="@+id/movie_select_tv_end_tm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/movie_select_tv_start_tm"
+                android:text="13:15散场" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/movie_select_lv_movietime_rl_ii"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/movie_select_lv_movietime_rl_i"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/movie_select_tv_tp"
+                style="@style/MovieTPSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="英语3D" />
+
+            <TextView
+                android:id="@+id/movie_select_tv_th"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/movie_select_tv_tp"
+                android:text="3号厅" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/movie_select_lv_movietime_rl_iii"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/movie_select_tv_buy"
+            android:layout_marginRight="10dp"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/movie_select_tv_sellPr"
+                style="@style/MovieSellPrSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_alignRight="@+id/movie_select_tv_extraDesc"
+                android:text="￥29" />
+
+            <TextView
+                android:id="@+id/movie_select_tv_extraDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/movie_select_tv_sellPr"
+                android:text="影院价:￥80" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/movie_select_tv_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="4dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/movie_select_buy_tv_shape"
+            android:textColor="@color/redIII"
+            android:textSize="11sp"
+            android:text="选座购票"/>
+    </RelativeLayout>
+</LinearLayout>

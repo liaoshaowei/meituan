@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xugang.meituan.GuideActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_18"
+        android:background="@drawable/shape_guide_gv"
+        android:padding="@dimen/margin_12"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:background="@drawable/sleckt_main"
+            android:button="@null"
+            android:checked="true" />
+
+        <RadioButton
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:background="@drawable/sleckt_main"
+            android:button="@null" />
+
+        <RadioButton
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:background="@drawable/sleckt_main"
+            android:button="@null" />
+
+        <RadioButton
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:background="@drawable/sleckt_main"
+            android:button="@null" />
+
+        <RadioButton
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:background="@drawable/sleckt_main"
+            android:button="@null" />
+    </RadioGroup>
+
+</RelativeLayout>

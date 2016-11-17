@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:coverflow="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize">
+
+        <TextView
+            android:id="@+id/movie_select_tv_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/movie_left" />
+
+        <TextView
+            android:id="@+id/movie_select_tv_cinema"
+            style="@style/MovieTextSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/movie_select_tv_back"
+            android:text="横店电影城（高德汇店）" />
+
+        <ImageView
+            android:id="@+id/movie_select_iv_share"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:layout_toLeftOf="@+id/movie_select_iv_collect"
+            android:src="@mipmap/teemo_ic_action_share" />
+
+        <ImageView
+            android:id="@+id/movie_select_iv_collect"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:src="@mipmap/takeout_ic_poi_collect_dark" />
+    </RelativeLayout>
+
+    <com.xugang.meituan.weight.PullToRefreshView
+        android:id="@+id/movie_selet_pull_to_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="6">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5">
+
+                        <RelativeLayout
+                            android:id="@+id/movie_select_rl_i"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:id="@+id/tv_cinemas"
+                                style="@style/MovieTextSize"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="横店电影城（高德汇店）" />
+
+                            <TextView
+                                android:id="@+id/tv_grade"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/tv_cinemas"
+                                android:text="3.9分"
+                                android:textColor="@color/yellowI" />
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:id="@+id/movie_select_tv_ii"
+                            style="@style/MovieSmallTextI"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/movie_select_rl_i"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginTop="10dp"
+                            android:singleLine="true"
+                            android:text="天河区长兴路13号优托邦购物中心3楼" />
+
+                        <LinearLayout
+                            android:id="@+id/movie_select_rl_iii"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/movie_select_tv_ii"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:id="@+id/tv_i"
+                                style="@style/MovieSmallTextI"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/movie_select_shape_i"
+                                android:padding="2dp"
+                                android:text="取票机" />
+
+                            <TextView
+                                android:id="@+id/tv_ii"
+                                style="@style/MovieSmallTextI"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/movie_select_shape_i"
+                                android:padding="2dp"
+                                android:text="儿童优惠" />
+
+                            <TextView
+                                android:id="@+id/tv_iii"
+                                style="@style/MovieSmallTextI"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/movie_select_shape_i"
+                                android:padding="2dp"
+                                android:text="儿童优惠" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="33dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@color/grayII" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/movie_show_locate" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/movie_select_shape_ii"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="观影套餐" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginTop="5dp"
+                                android:text="小吃、周边12.9元起" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/movie_select_shape_iii"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:text="观影套餐" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:text="小吃、周边12.9元起" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grayII" />
+
+                <it.moondroid.coverflow.components.ui.containers.FeatureCoverFlow
+                    android:id="@+id/movie_select_coverflow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    coverflow:coverHeight="@dimen/cover_height"
+                    coverflow:coverWidth="@dimen/cover_width"
+                    coverflow:maxScaleFactor="1"
+                    coverflow:reflectionGap="0dp"
+                    coverflow:rotationThreshold="0.2"
+                    coverflow:scalingThreshold="0.2"
+                    coverflow:spacing="0.6" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grayII" />
+
+                <LinearLayout
+                    android:id="@+id/movie_select_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/movie_select_nm"
+                            style="@style/MovieTextSize"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="电影名" />
+
+                        <TextView
+                            android:id="@+id/movie_select_sc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="8.9"
+                            android:textColor="@color/yellowI" />
+
+                        <TextView
+                            android:id="@+id/movie_select_wish"
+                            style="@style/MovieItemTextIV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:text="分" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/movie_select_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:text="122分钟 | 剧情 | 汤姆·汉克斯" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grayII" />
+
+                    <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="40dp">-->
+
+                    <!--<RelativeLayout-->
+                    <!--android:id="@+id/movie_select_time_rl_i"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent">-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/movie_select_time_tv_i"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="今天11月3日" />-->
+
+                    <!--<View-->
+                    <!--android:id="@+id/movie_select_time_v_i"-->
+                    <!--android:layout_width="100dp"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:layout_alignParentBottom="true"-->
+                    <!--android:background="@color/toobar_color" />-->
+                    <!--</RelativeLayout>-->
+
+                    <!--<RelativeLayout-->
+                    <!--android:id="@+id/movie_select_time_rl_ii"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_toRightOf="@id/movie_select_time_rl_i"-->
+                    <!--android:visibility="gone">-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/movie_select_time_tv_ii"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="后天11月5日" />-->
+
+                    <!--<View-->
+                    <!--android:id="@+id/movie_select_time_v_ii"-->
+                    <!--android:layout_width="100dp"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:layout_alignParentBottom="true"-->
+                    <!--android:background="@color/toobar_color"-->
+                    <!--android:visibility="gone"/>-->
+                    <!--</RelativeLayout>-->
+
+                    <!--<RelativeLayout-->
+                    <!--android:id="@+id/movie_select_time_rl_iii"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:visibility="gone"-->
+                    <!--android:layout_toRightOf="@id/movie_select_time_rl_i">-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/movie_select_time_tv_iii"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="周日11月6日" />-->
+
+                    <!--<View-->
+                    <!--android:id="@+id/movie_select_time_v_iii"-->
+                    <!--android:layout_width="100dp"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:layout_alignParentBottom="true"-->
+                    <!--android:background="@color/toobar_color"-->
+                    <!--android:visibility="gone"/>-->
+                    <!--</RelativeLayout>-->
+
+                    <!--<RelativeLayout-->
+                    <!--android:id="@+id/movie_select_time_rl_iv"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_toRightOf="@id/movie_select_time_rl_i"-->
+                    <!--android:visibility="gone">-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/movie_select_time_tv_iv"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="周一11月7日" />-->
+
+                    <!--<View-->
+                    <!--android:id="@+id/movie_select_time_v_iv"-->
+                    <!--android:layout_width="100dp"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:layout_alignParentBottom="true"-->
+                    <!--android:background="@color/toobar_color"-->
+                    <!--android:visibility="gone"/>-->
+                    <!--</RelativeLayout>-->
+                    <!--</RelativeLayout>-->
+
+
+                    <!--<ScrollView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content">-->
+                    <RadioGroup
+                        android:id="@+id/movie_select_rg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/movie_select_rb_i"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:button="@null"
+                            android:text="今天11月3日" />
+
+                        <RadioButton
+                            android:id="@+id/movie_select_rb_ii"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:button="@null"
+                            android:text="明天11月4日"
+                            android:visibility="gone" />
+
+                        <RadioButton
+                            android:id="@+id/movie_select_rb_iii"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:button="@null"
+                            android:text="后天11月5日"
+                            android:visibility="gone" />
+
+                        <RadioButton
+                            android:id="@+id/movie_select_rb_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:button="@null"
+                            android:text="周日11月6日"
+                            android:visibility="gone" />
+
+                        <RadioButton
+                            android:id="@+id/movie_select_rb_v"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:button="@null"
+                            android:text="周一11月7日"
+                            android:visibility="gone" />
+                    </RadioGroup>
+                    <!--</ScrollView>-->
+
+
+                    <com.xugang.meituan.weight.MyListView
+                        android:id="@+id/movie_select_lv_movietime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tv_no_movie"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="20dp"
+                        android:text="暂无上映信息"
+                        android:textSize="30sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </com.xugang.meituan.weight.PullToRefreshView>
+</LinearLayout>
